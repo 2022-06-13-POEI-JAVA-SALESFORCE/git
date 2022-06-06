@@ -1,8 +1,8 @@
-### Exercice 6
+### Exercice 7
 
 **PS : Avec le jargon technique**
 
-#### Partie 1
+### Partie 1
 
 1. Créer un nouveau dossier
 2. Initialisez un dépôt git
@@ -39,7 +39,7 @@
 3. Tapez sur le bouton `Echap` pour quitter le mode d'édition
 4. Tapez sur `:x` pour enregistrer les modification et quitter l'éditeur
 
-#### Partie 4
+### Partie 4
 
 1. Fusionnez la branche ex6/part1-3 dans la branche main
 2. Créez une nouvelle branche ex6/part4 à partir de la branche main
@@ -58,7 +58,7 @@ Depuis votre compte GitHub, à partir du dépôt où vous avez envoyé précéde
 
 En local
 
-4. Récupérez les modifications du dépôt distant (aide commande à effectuer `git checkout -b ex6/part5 --track orgin/ex6/part5`)
+4. Récupérez les modifications du dépôt distant (aide commande à effectuer `git checkout -b ex6/part5 --track origin/ex6/part5`)
 5. Fusionnez la branche ex6/part5 dans la branche main
 
 ### Partie 6
@@ -78,8 +78,6 @@ En local
 7. Résolvez le conflit
 8. Fusionnez la branche ex6/part7 dans la branche main
 9. Ajoutez une version(tag) au dernier commit (`git tag v1.0.0`)
-10. Analisez l'état de votre dépot à l'aide de la commande `git log`
+10. Analysez l'état de votre dépôt à l'aide de la commande `git log`
 11. Envoyez vers votre dépôt distant Github toutes vos branches locales
 12. En local, supprimez toutes les branches sauf la branche main (pour supprimer une branche `git branch -d nom_de_la_branche_a_supprimer`)
-
-
