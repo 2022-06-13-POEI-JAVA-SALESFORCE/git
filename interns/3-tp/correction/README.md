@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 # TP Git et Github
-=======
-## TP GIT
->>>>>>> feature/pratical-work/dev1
-
 ## Objectifs du TP
 
 1. Travailler à plusieurs sur le même dépôt.
