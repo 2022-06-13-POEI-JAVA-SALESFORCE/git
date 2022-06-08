@@ -1,136 +1,155 @@
-# Travail collaboratif avec Git et GitHub
+# TP : travail collaboratif avec Git et GitHub
 
-#### Objectifs du TP
+## Objectifs du TP
 
-1. Travailler à plusieurs sur le même dépôt
-2. Créer et résoudre des conflits
-3. Se familiariser avec GitHub
-4. Se familiariser avec le jargon technique
-5. Se familiariser avec le format markdown (extension .md), utilisé pour la documentation sur des projets git
+1. Travailler à plusieurs sur le même dépôt.
+2. Créer et résoudre des conflits.
+3. Se familiariser avec l'utilisation de l'interface en ligne GitHub.
+4. Se familiariser avec le jargon technique.
+5. Se familiariser avec le format markdown (extension .md), utilisé pour la documentation sur des projets git.
 
-### Explications du jargon technique
+## Ressources
 
-- *Owner* : propriétaire du dépôt
-- *Developers* : collaborateurs qui peuvent apporter des modifications au dépôt
-- *Maintenairs* : collaborateurs qui ont un peu plus de droits que les developers
-- *Issue* : problème à résoudre, généralement on crée un issue lorsqu'on souhaite affecter un développeur sur une tâche, ça peut être un bug,une nouvelle fonctionnalité, de la documentation etc... Généralement l'issue débouche sur la création d'une nouvelle branche portant le même nom que l'issue pour résoudre un problème.
-- *Pull/Merge request* : il s'agit d'une demande de soumission de votre code (vos modifications sur un projet) au propriétaire du dépôt pour que celui-ci puisse être intégré dans le projet.
-Lorsque le propriétaire accepte votre travail, vos modifications seront mergées(intégrées) dans la branche main.
-Lorsqu'il refuse, il vous dira pourquoi à l'aide des fonctionnalités proposés par les hébergeurs de dépôt distant comme GitHub, Bitbucket, Gitlab.
-Chaque propriétaire impose ses exigences dans une documentation (le README.md par exemple) au niveau du processus globale, le nommage des commits, la qualité du code, les tests unitaires, intégrations et fonctionnelles à effectuer.
-- README.md : à la racine du projet, fichier contenant les instructions pour installer le projet plus généralement la documentation du projet. Il peut y en avoir ailleurs dans les sous-dossiers du projet avec des instrutions plus spécifiques une partie du projet.
-- .gitignore : à la racine du projet, fichier permettant d'ignorer certains fichiers ou dossiers qu'on ne souhaite versionner.
-- Assigner : Désigner un collaborateur pour effectuer une tâche
-- Reviewer : La personne qui va effectuer de la revue de code (revoir,vérifier, corriger votre code)
-#### Formation des groupes
+- [Guide syntaxe markdown, à utiliser pour faire la mise en page de vos fichiers markdown](https://docs.framasoft.org/fr/grav/markdown.html)
 
-- Groupe de 3 personnes
-- Dans chaque groupe, il y aura 1 personne avec le rôle de owner(propriétaire du dépôt) et 2 personnes avec le rôle de Developpers
-  - 1 *Owner* : créateur et responsable du dépôt Git
-  - 2 *Developers* : développeurs qui participent au projet
+## Définitions
+
+- ***Owner*** : propriétaire du dépôt.
+- ***Developers*** : collaborateurs qui travaillent sur le dépôt.
+- ***Maintenairs*** : collaborateurs qui ont un peu plus de droits que les *developers*.
+- ***Issue*** : problème à résoudre, généralement on crée une *issue* lorsqu'on souhaite affecter un développeur sur une tâche, ça peut être un bug, une nouvelle fonctionnalité, de la documentation etc... Généralement l'*issue* débouche sur la création d'une nouvelle branche portant le même nom.
+- ***Pull/Merge request*** : il s'agit d'une demande de soumission de votre code (vos modifications sur un projet) au propriétaire du dépôt pour que ce dernier puisse l'intègre sur la branche principale *main*.
+Lorsque le propriétaire accepte votre travail, vos modifications seront mergées(intégrées) dans la branche *main*.
+Lorsqu'il refuse, il vous donnera la raison du refus.
+Chaque propriétaire impose ses propres exigences (fichier *`README.md`*) en matière d'installation, technologies, versions, nommage des commits, qualité du code requise, tests unitaires, intégrations, d'acceptation, fonctionnelles etc.
+- ***`README.md`*** : à la racine du projet, fichier contenant les instructions pour installer le projet plus généralement la documentation du projet.
+Également présent dans les sous-dossiers du projet pour donner des instructions plus spécifiques à cette partie du projet.
+- ***.gitignore*** : à la racine du projet, fichier permettant d'ignorer certains fichiers ou dossiers qu'on ne souhaite versionner ou envoyer sur le dépôt distant.
+- ***Assigner*** : désigner un collaborateur pour effectuer une tâche.
+- ***Reviewer*** : un collaborateur qui va effectuer de la revue de code (revoir, vérifier, corriger votre code) d'un autre collaborateur.
+
+## Formation des groupes
+
+- Groupe de 3 développeurs.
+- Dans chaque groupe :
+  - 1 *Owner*;
+  - 2 *Developers*.
 
 ## PARTIE 1
 
-#### Mission du *owner*
+### Tâches du *owner* au lancement du projet
 
-- Tâches du *owner*
-1. Créez un dépôt GitHub nommé ***tp-git*** avec les fichiers suivants :
-   - ***README.md*** contenant les instructions adressées aux collaborateurs pour récupérer le dépôt 
-   - ***.gitignore***
-   
-2. Invitez les 2 développeurs qui doivent collaborer dans ce projet et le formateur dont l'adresse e-mail est *contact@tshimini.fr*
+1. Depuis Github, Créez un dépôt GitHub nommé ***tp-git*** vide(aucun fichier).
+2. En local : 
+   2.1 Récupérez ou faites le lien avec le dépôt distant;
+   2.2 Créez les fichiers `README.md` et `.gitignore`;
+   2.3 Effectuez votre **premier commit**;
+   2.4 Renommez la branche *master* en *main*;
+   2.5 Pushez.
+3. Depuis Github, invitez les 2 autres collaborateurs à participer au projet.
 
-   - **Settings > General > Access > Collaborators > add people**
+   - **Settings  > Access > Collaborators > add people**.
+   - Saisissez leurs adresses e-mails.
 
-   **Illustration**
+##### Ilustration ajout des collaborateurs
 
-![Catpure ecran](img/access.jpg)
+![access](img/jpg/access.jpg)
 
-3. Désignez le développeur 1 et le développeur 2 (nécessaire pour attribuer les tâches à chacun)
+4. Depuis GitHub, Créez deux *issues* : 
 
-4. Créez deux *issues* : 
+   1. Première *issue* nommée ***feature/morning_menu*** et assignez au premier développeur (développeur 1).
 
-   1. Première *issue* nommée ***feature/morning_menu*** et assignez le développeur 1
+   2. Deuxième *issue* nommée ***feature/lunch_menu*** et assignez au second développeur (développeur 2).
+##### Illustration création d'un *issue*
+![1](img/jpg/issue1.jpg)
+![2](img/jpg/issue2.jpg)
 
-   2. Deuxième *issue* nommée ***feature/lunch_menu*** et assignez le développeur 2
+### Tâches du *owner* après le lancement du projet
 
-      Vous pouvez ajouter les **labels** de votre choix dans la liste proposée à la création
-      **Illustrations**
-      ![issue1](img/issue_1.jpg)
-      ![issue2](img/issue_2.jpg)
-5. En local :
-   
-   1. Récupérez le dépôt distant
-   2. Créez une branche nommée ***main*** 
-   3. Modifiez la mise en page ***README.md*** en suivant ce [guide](https://docs.framasoft.org/fr/grav/markdown.html)
-   4. Pushez
+5. Depuis GitHub, acceptez et publiez ou rejetez les demandes  *merge requests* des développeurs.
   
-6. Acceptez, publiez ou rejetez-les *pull requests* de vos développeurs
+   - En cas de rejet, indiquez aux développeurs le motif (utilisez les outils mis à disposition sur GitHub pour communiquer).
+   - Gérez les conflits lors des *merge requests* sur la branche *main*.
   
-   - En cas de rejet, indiquez à vos développeurs le motif du refus grâce aux outils mis à disposition sur GitHub
-   - Gérez les conflits lors des *merge requests* sur la branche *main*
-  
-7. Après avoir effectué les *merge request*s des travaux de vos développeurs sur la branche *main*
-  
-   1. Créez une *issue* nommée ***feature/prices*** et assignez-le à vous même
-   2. Créez une nouvelle branche qui porte le même nom que *issue*
-   3. Ajoutez les prix aux produits présents sur chaque ligne des fichiers ***menu.md*** et ***drink.md***
-   4. Pushez vos modifications sur le dépôt distant
-   5. Effectuez le *merge requests* de cette branche dans la branche *main*
-  
-8. Prévenez vos collaborateurs de l'ajout des prix
+7. Depuis GitHub, après avoir effectué les *merge requests* des travaux des développeurs sur la branche *main*.
+   1. Créez une *issue* nommée ***feature/prices*** et assignez-le à vous même.
+   2. Créez une nouvelle branche qui porte le même nom que l' *issue* depuis l'onglet ***Issues***, **attention** a bien renommer le nom de la branche pour exactement le même nom que celle de l'*issue*.
+##### Illustration création d'une branche à partir de l'onglet *Issues*
 
-#### Missions du premier développeur
+![2](img/jpg/prices2.jpg)
+![3](img/jpg/prices3.jpg)
+8. En local:
+   1. Créez et récuperez la branche *feature/prices*.
+   ![4](img/png/prices4.png)
+    ou à l'aide de la commande suivante : `git checkout -b feature/prices --track origin feature/prices`;
+   2. Ajoutez les prix aux produits présents sur chaque ligne des fichiers ***menu.md*** et ***drink.md***;
+   4. Pushez vos modifications sur le dépôt distant;
+   5. Effectuez un *merge requests* de cette branche dans la branche *main* en assignant l'un des développeurs pour effectuer de la revue de code;
+9. Prévenez vos collaborateurs de l'ajout des prix.
 
-1. Acceptez l'invitation reçue 
-2. Récupérez le projet en local
-3. Créez une nouvelle branche portant le même nom que *issue* qui vous a été assignée
-4. **A la racine du projet**
-   1. Créez un fichier nommé ***menu.md*** qui doit contenir vos viennoiseries préférées
-   2. Créez un fichier nommé ***drink.md*** contenant vos boissons favorites pour le petit-déjeuner 
-5. Commitez et pushez vers le dépôt distant sur la branche *feature/morning_menu*
-6. Faites une demande de *pull request* :
-   1. En mettant le développeur 2 en tant que ***Reviewers*** pour la revue du code
-   2. Assignez le *owner* dans ***Assignees***
-   3. Ajoutez un petit commentaire pour expliquer votre travail
-7. Après avoir été notifié de l'ajout des prix par le *owner*
-   1. Récupérez tous les changements effectués sur le dépôt distant en local
-   2. En cas de conflits, gérez-les en communiquant avec vos collaborateurs
-8. Créez une nouvelle branche pour modifier la mise en page des fichiers *menu.md*  et *drink.md* en suivant ce [guide](https://docs.framasoft.org/fr/grav/markdown.html)
-9. Soumettez cette branche pour une intégration dans la branche *main* 
+### Tâches du premier développeur au lancement du projet
 
-#### Missions du second développeur
+1. Depuis votre boite de messagerie ou GitHub, acceptez l'invitation reçue.
+2. Depuis GitHub, créez une nouvelle branche à partir de l'*issue* qui vous a été assignée, **attention** renommez le nom de la branche pour quelle soit identique au nom de l'*issue*.
+Depuis l'onglet issue
+![1](img/jpg/morning1.jpg)
+![2](img/jpg/morning2.jpg)
+3. En local, créez une nouvelle branche portant le même que l' *issue* à l'aide de la commande suivante.
+![3](img/png/morning3.png)
+PS : vous pouvez également utilisé la commande suivante : `git checkout -b feature/morning_menu --track origin feature/morning_menu`
+4. **En local, à la racine du projet**
+   1. Créez un fichier nommé ***`menu.md`*** qui doit lister vos viennoiseries préférées (une vionnoiserie par ligne).
+   2. Créez un fichier nommé ***`drink.md`*** contenant vos boissons favorites pour le petit-déjeuner (une boisson par ligne).
+5. En local, commitez et pushez sur la branche *feature/morning_menu*.
+6. Depuis GitHub, faites une demande de *pull request* :
+   1. En mettant le développeur 2 en tant que ***Reviewers*** pour la revue du code;
+   2. Assignez le *owner* dans ***Assignees***;
+   3. Ajoutez un petit commentaire pour expliquer votre travail.
 
-1. Acceptez l'invitation reçue 
-2. Récupérez le projet en local
-3. Créez une nouvelle branche portant le même nom que *issue* qui vous a été assignée
-4. **A la racine du projet**
-   1. Créez un fichier nommé ***menu.md*** qui doit contenir vos plats préférés
-   2. Créez un fichier nommé  ***drink.md*** contenant vos boissons favorites pour le déjeuner 
-5. Commitez et pushez vers le dépôt distant sur la branche *feature/lunch_menu*
-6. Faites une demande de *pull request* :
-   1. En mettant le développeur 1 en tant que ***Reviewers*** pour la revue du code
-   2. Assignez le *owner* dans ***Assignees***
-   3. Ajoutez un petit commentaire pour expliquer votre travail
-7. Après avoir été notifié de l'ajout des prix par le *owner*
-   1. Récupérez tous les changements effectués sur le dépôt distant en local
-   2. En cas de conflits, gérez-les en communiquant avec vos collaborateurs
-8. Créez une nouvelle branche pour modifier la mise en page des fichiers *menu.md* et *drink.md* en suivant ce [guide](https://docs.framasoft.org/fr/grav/markdown.html)
-9. Soumettez cette branche pour une intégration dans la branche *main* 
+### Tâches du premier développeur après l'ajout des prix par le *owner*
 
-### PARTIE 2
+7. En local, après avoir été notifié de l'ajout des prix par le *owner*.
+   1. Récupérez tous les modifications effectués sur le dépôt distant.
+   2. En cas de conflits, gérez-les en communiquant avec vos collaborateurs.
 
-**En total autonomie**
+### Tâches du second développeur après le lancement du projet
 
-1. Echangez vos rôles
+1. Depuis votre boite de messagerie ou GitHub, acceptez l'invitation reçue.
+2. Depuis GitHub, créez une nouvelle branche à partir de l'*issue* qui vous a été assignée, **attention** renommez le nom de la branche pour quelle soit identique au nom de l'*issue*.
+Depuis l'onglet issue
+![1](img/jpg/lunch1.jpg)
+![2](img/jpg/lunch2.jpg)
+3. En local, créez une nouvelle branche portant le même que l' *issue* à l'aide de la commande suivante.
+![3](img/png/lunch3.png)
+PS : vous pouvez également utilisé la commande suivante : `git checkout -b feature/lunch_menu --track origin feature/lunch_menu`
+4. **En local, à la racine du projet**
+   1. Créez un fichier nommé ***`menu.md`*** listant vos plats préférés (un plat par ligne).
+   2. Créez un fichier nommé ***`drink.md`*** contenant vos boissons favorites pour accompagner vos plats (une boisson par ligne).
+5. En local, commitez et pushez sur la branche *feature/lunch_menu*.
+6. Depuis GitHub, faites une demande de *pull request* :
+   1. En mettant le développeur 1 en tant que ***Reviewers*** pour la revue du code;
+   2. Assignez le *owner* dans ***Assignees***;
+   3. Ajoutez un petit commentaire pour expliquer votre travail.
+
+### Tâches du premier développeur après l'ajout des prix par le *owner*
+
+7. En local, après avoir été notifié de l'ajout des prix par le *owner*.
+   1. Récupérez tous les modifications effectués sur le dépôt distant.
+   2. En cas de conflits, gérez-les en communiquant avec vos collaborateurs.
+
+## PARTIE 2
+
+### En autonomie
+
+1. Echangez vos rôles.
 2. Concertez-vous pour créer des nouvelles *issues* et branches dans le but : 
-   - D'étoffer le contenu des fichiers *menu.md* et *drink.md* 
-   - De restructurer l'arborescence des fichiers en créant des nouveaux dossiers et/ou fichiers par exemple
-   - D'ajouter quelques photos
-   - **Et tout ce qui vous passe par la tête**
+   - d'étoffer le contenu des fichiers *`menu.md`* et *`drink.md`* ;
+   - de restructurer l'arborescence des fichiers en créant des nouveaux dossiers et/ou fichiers;
+   - d'ajouter des images des plats;
+   - **d'ajouter tout ce qui vous passe par la tête** (un minimum pertinent par rapport au contexte).
 
-**Illustrations pour transférer le rôle d'*Owner* à un autre collaborateur**
+##### Illustrations pour transférer le rôle d'*Owner* à un autre collaborateur
 
-![image](img/transfer_owner1.jpg)
+![image](img/jpg/transfer_owner1.jpg)
 
 ![image](img/transfer_owner2.jpg)
