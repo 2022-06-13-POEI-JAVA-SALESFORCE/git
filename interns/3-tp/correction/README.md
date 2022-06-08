@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # TP Git et Github
+=======
+## TP GIT
+>>>>>>> feature/pratical-work/dev1
 
 ## Objectifs du TP
 
