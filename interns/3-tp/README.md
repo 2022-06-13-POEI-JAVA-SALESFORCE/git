@@ -42,9 +42,13 @@ Chaque propriétaire impose ses propres exigences (fichier *`README.md`*) en mat
 2. En local :
 
    2.1 Récupérez ou faites le lien avec le dépôt distant;
+
    2.2 Créez les fichiers `README.md` et `.gitignore`;
+
    2.3 Effectuez votre **premier commit**;
+
    2.4 Renommez la branche *master* en *main*;
+
    2.5 *Pushez*.
 3. Depuis Github, invitez les 2 autres collaborateurs à participer au projet.
 
@@ -58,6 +62,7 @@ Chaque propriétaire impose ses propres exigences (fichier *`README.md`*) en mat
 4. Depuis GitHub, Créez deux *issues* : 
 
    1. Première *issue* nommée ***feature/morning_menu*** et assignez au premier développeur (développeur 1).
+   
    2. Deuxième *issue* nommée ***feature/lunch_menu*** et assignez au second développeur (développeur 2).
 ##### Illustration création d'un *issue*
 ![1](img/jpg/issue1.jpg)

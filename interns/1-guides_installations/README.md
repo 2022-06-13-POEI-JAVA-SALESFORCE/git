@@ -13,10 +13,10 @@ Lors de l'installation garder les paramètres par défaut, vous pouvez éventuel
 
 - Beautify
 - Emmet Live
-- Prettier - Code formatter
 - ESlint
 - Live Server
 - Git Graph
+- Git history
 - TODO Tree
 - Vscode-pdf
 
