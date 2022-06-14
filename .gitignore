@@ -1,6 +1,5 @@
 /*
 !.gitignore
 !interns
+!README.md
 /**/*.pdf
-/**/correction*/**/*.md
-!/**/corrections/exercice[1-5]/**/*.md
